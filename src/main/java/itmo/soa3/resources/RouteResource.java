@@ -5,7 +5,6 @@ import itmo.soa3.services.RouteService;
 
 import javax.ejb.EJB;
 import javax.validation.Valid;
-import javax.validation.constraints.Pattern;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;

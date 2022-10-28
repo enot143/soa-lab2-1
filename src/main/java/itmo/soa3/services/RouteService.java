@@ -134,12 +134,12 @@ public class RouteService {
         }
     }
 
-    public Response countDistanceEquals(int distance){
+    public Response countDistanceEquals(double distance){
         long c = routeDAO.countDistanceEquals(distance);
         return Response.ok().entity(c).build();
     }
 
-    public Response countDistanceGreater(int distance) {
+    public Response countDistanceGreater(double distance) {
         long c = routeDAO.countDistanceGreater(distance);
         return Response.ok().entity(c).build();
     }

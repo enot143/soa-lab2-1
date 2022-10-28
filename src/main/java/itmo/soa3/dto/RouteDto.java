@@ -3,7 +3,7 @@ package itmo.soa3.dto;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.validation.constraints.Min;
+import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
@@ -25,6 +25,6 @@ public class RouteDto implements Serializable {
     @NotNull(message = "to can't be null")
     private LocationDto to;
 
-    @Min(value = 2, message = "distance must be > 1")
-    private int distance;
+    @DecimalMin(value = "1.0", inclusive = false, message = "distance must be > 1")
+    private double distance;
 }

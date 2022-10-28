@@ -10,9 +10,6 @@ public class LocationDtoValidator implements ConstraintValidator<LocationAnnotat
     public void initialize(LocationAnnotation constraintAnnotation) {
     }
 
-    /**
-     * Validate zipcode and city depending on the country
-     */
     public boolean isValid(LocationDto object, ConstraintValidatorContext context) {
         if (object == null) {
             throw new IllegalArgumentException("@LocationAnnotation only applies to LocationDto objects");

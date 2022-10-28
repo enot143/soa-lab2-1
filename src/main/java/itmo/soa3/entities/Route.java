@@ -37,5 +37,5 @@ public class Route {
     private Location to;
 
     @Column(name = "distance")
-    private int distance;
+    private double distance;
 }

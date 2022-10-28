@@ -117,7 +117,7 @@ public class RouteDAO {
     }
 
     @Transactional
-    public long countDistanceEquals(int distance){
+    public long countDistanceEquals(double distance){
         CriteriaBuilder cb = entityManager.getCriteriaBuilder();
         CriteriaQuery<Long> cq = cb.createQuery(Long.class);
         Root<Route> root = cq.from(Route.class);
@@ -128,7 +128,7 @@ public class RouteDAO {
     }
 
     @Transactional
-    public long countDistanceGreater(int distance) {
+    public long countDistanceGreater(double distance) {
         CriteriaBuilder cb = entityManager.getCriteriaBuilder();
         CriteriaQuery<Long> cq = cb.createQuery(Long.class);
         Root<Route> root = cq.from(Route.class);
